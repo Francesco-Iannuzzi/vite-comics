@@ -13,7 +13,11 @@ Consigli:
 - Non dimenticate di analizzare il layout con Penpot -->
 
 <script>
+import SiteHeader from "./components/SiteHeader.vue";
 export default {
+  components: {
+    SiteHeader
+  },
   data() {
     return {
     }
@@ -22,51 +26,24 @@ export default {
 </script>
 
 <template>
-  <header>
-    <div class="logo">
-      <img src="../public/img/dc-logo.png" alt="">
-    </div>
-    <nav class="navbar navbar-expand-lg bg-light">
-      <div class="container-fluid">
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">characters</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">comics</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">movies</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">tv</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">games</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">collectibles</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">videos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">fans</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">news</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">shop</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
+  <SiteHeader></SiteHeader>
   <main></main>
   <footer></footer>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss">
+@use '/node_modules/bootstrap/scss/bootstrap.scss';
+
+header {
+  padding: 1rem 0;
+
+  .logo img {
+    width: 3rem;
+  }
+
+  .navbar-nav a {
+    font-size: 0.8rem;
+    color: black;
+  }
+}
+</style>
