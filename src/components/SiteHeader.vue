@@ -2,6 +2,7 @@
 export default {
     data() {
         return {
+            menuList: ['characters', 'comics', 'movies', 'tv', 'games', 'collectibles', 'videos', 'fans', 'news', 'shop',]
         }
     }
 }
@@ -17,35 +18,8 @@ export default {
                 <div class="container-fluid">
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">characters</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">comics</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">movies</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">tv</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">games</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">collectibles</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">videos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">fans</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">news</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">shop</a>
+                            <li v-for="item in menuList" class="nav-item">
+                                <a class="nav-link" href="#">{{ item }}</a>
                             </li>
                         </ul>
                     </div>
