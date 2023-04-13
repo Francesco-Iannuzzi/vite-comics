@@ -14,9 +14,11 @@ Consigli:
 
 <script>
 import SiteHeader from "./components/SiteHeader.vue";
+import SiteMain from "./components/SiteMain.vue";
 export default {
   components: {
-    SiteHeader
+    SiteHeader,
+    SiteMain
   },
   data() {
     return {
@@ -27,12 +29,18 @@ export default {
 
 <template>
   <SiteHeader></SiteHeader>
-  <main></main>
+  <SiteMain></SiteMain>
   <footer></footer>
 </template>
 
 <style lang="scss">
 @use '/node_modules/bootstrap/scss/bootstrap.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 header {
   padding: 1rem 0;
@@ -44,6 +52,33 @@ header {
   .navbar-nav a {
     font-size: 0.8rem;
     color: black;
+  }
+}
+
+main {
+  .content {
+    background-color: black;
+    color: white;
+    display: flex;
+
+    h1 {
+      padding: 3rem 0;
+      font-size: 2rem;
+    }
+  }
+
+  .merch {
+    background-color: blue;
+
+    img {
+      width: 2rem;
+      object-fit: contain;
+    }
+
+    h2 {
+      color: white;
+      font-size: 0.75rem;
+    }
   }
 }
 </style>
