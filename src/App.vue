@@ -15,10 +15,12 @@ Consigli:
 <script>
 import SiteHeader from "./components/SiteHeader.vue";
 import SiteMain from "./components/SiteMain.vue";
+import SiteFooter from "./components/SiteFooter.vue";
 export default {
   components: {
     SiteHeader,
-    SiteMain
+    SiteMain,
+    SiteFooter,
   },
   data() {
     return {
@@ -30,7 +32,7 @@ export default {
 <template>
   <SiteHeader></SiteHeader>
   <SiteMain></SiteMain>
-  <footer></footer>
+  <SiteFooter></SiteFooter>
 </template>
 
 <style lang="scss">
@@ -75,9 +77,54 @@ main {
       object-fit: contain;
     }
 
-    h2 {
+    h3 {
       color: white;
       font-size: 0.75rem;
+    }
+  }
+}
+
+footer {
+  .up_footer {
+    background-image: url(./assets/img/footer-bg.jpg);
+    height: 20rem;
+
+    .footer_left {
+      color: white;
+
+      h2 {
+        font-size: 1rem;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        font-size: 0.7rem;
+
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+
+    .footer_right {
+
+      img {
+        height: 20rem;
+      }
+    }
+  }
+
+  .bottom_footer {
+    background-color: gray;
+
+    h2 {
+      font-size: 1rem;
+    }
+
+    ul {
+      list-style: none;
     }
   }
 }
