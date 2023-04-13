@@ -1,7 +1,12 @@
 <script>
 export default {
+    name: 'SiteFooter',
     data() {
         return {
+            dcComicsList: ['Characters', 'Comics', 'Movies', 'TV', 'Games', 'Videos', 'News',],
+            shopList: ['Shop DC', 'Shop DC Collectibles'],
+            dcList: ['Terms Of Use', 'Privacy policy (New)', 'Ad Choices', 'Advertising', 'Jobs', 'Subscriptions', 'Talent Workshops', 'CPSC Certificates', 'Ratings', 'Shop Help', 'Contact Us',],
+            sitesList: ['DC', 'MAD Magazine', 'DC Kids', 'DC Universe', 'DC Power Visa',],
         }
     }
 }
@@ -17,51 +22,31 @@ export default {
                             <div>
                                 <h2 class="text-uppercase">dc comics</h2>
                                 <ul>
-                                    <li><a href="#">Characters</a></li>
-                                    <li><a href="#">Comics</a></li>
-                                    <li><a href="#">Movies</a></li>
-                                    <li><a href="#">TV</a></li>
-                                    <li><a href="#">Games</a></li>
-                                    <li><a href="#">Videos</a></li>
-                                    <li><a href="#">News</a></li>
+                                    <li v-for="subSectionDcComics in dcComicsList"><a href="#">{{ subSectionDcComics }}</a>
+                                    </li>
                                 </ul>
                             </div>
                             <div>
                                 <h2 class="text-uppercase">shop</h2>
                                 <ul>
-                                    <li><a href="#">Shop DC</a></li>
-                                    <li><a href="#">Shop DC Collectibles</a></li>
+                                    <li v-for="subSectionShopList in shopList"><a href="#">{{ subSectionShopList }}</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div>
                             <h2 class="text-uppercase">dc</h2>
                             <ul>
-                                <li><a href="#">Terms Of Use</a></li>
-                                <li><a href="#">Privacy policy (New)</a></li>
-                                <li><a href="#">Ad Choices</a></li>
-                                <li><a href="#">Advertising</a></li>
-                                <li><a href="#">Jobs</a></li>
-                                <li><a href="#">Subscriptions</a></li>
-                                <li><a href="#">Talent Workshops</a></li>
-                                <li><a href="#">CPSC Certificates</a></li>
-                                <li><a href="#">Ratings</a></li>
-                                <li><a href="#">Shop Help</a></li>
-                                <li><a href="#">Contact Us</a></li>
+                                <li v-for="subSectionDc in dcList"><a href="#">{{ subSectionDc }}</a></li>
                             </ul>
                         </div>
                         <div>
                             <h2 class="text-uppercase">sites</h2>
                             <ul>
-                                <li><a href="#">DC</a></li>
-                                <li><a href="#">MAD Magazine</a></li>
-                                <li><a href="#">DC Kids</a></li>
-                                <li><a href="#">DC Universe</a></li>
-                                <li><a href="#">DC Power Visa</a></li>
+                                <li v-for="subSectionSitesList in sitesList"><a href="#">{{ subSectionSitesList }}</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="footer_right col-7 d-flex">
+                    <div class="footer_right col-7 d-flex justify-content-center">
                         <img src="../assets/img/dc-logo-bg.png" alt="">
                     </div>
                 </div>

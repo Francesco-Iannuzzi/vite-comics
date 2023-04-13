@@ -1,5 +1,6 @@
 <script>
 export default {
+    name: 'SiteHeader',
     data() {
         return {
             menuList: ['characters', 'comics', 'movies', 'tv', 'games', 'collectibles', 'videos', 'fans', 'news', 'shop',]

@@ -55,6 +55,10 @@ header {
   .navbar-nav a {
     font-size: 0.8rem;
     color: $darker;
+
+    &:hover {
+      color: $dc_color;
+    }
   }
 }
 
@@ -104,7 +108,7 @@ footer {
 
         a {
           text-decoration: none;
-          color: $light;
+          color: $icon;
         }
       }
     }
@@ -113,12 +117,14 @@ footer {
 
       img {
         height: 20rem;
+        align-self: center;
       }
     }
   }
 
   .bottom_footer {
     background-color: $dark;
+    z-index: 1;
 
     .sign {
       h2 {

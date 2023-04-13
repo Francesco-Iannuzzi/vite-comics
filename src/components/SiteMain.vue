@@ -1,7 +1,30 @@
 <script>
 export default {
+    name: 'SiteMain',
     data() {
         return {
+            sectionIcon: [
+                {
+                    images: '../assets/img/buy-comics-digital-comics.png',
+                    title: 'digital comics',
+                },
+                {
+                    images: '../assets/img/buy-comics-merchandise.png',
+                    title: 'dc merchandise',
+                },
+                {
+                    images: '../assets/img/buy-comics-subscriptions.png',
+                    title: 'subscription',
+                },
+                {
+                    images: '../assets/img/buy-comics-shop-locator.png',
+                    title: 'comic shop locator',
+                },
+                {
+                    images: '../assets/img/buy-dc-power-visa.svg',
+                    title: 'dc power visa',
+                },
+            ]
         }
     }
 }
@@ -16,26 +39,10 @@ export default {
         </section>
         <section class="merch text-uppercase">
             <div class="container">
-                <ul class="d-flex justify-content-around py-5 px-0 m-0">
-                    <li class="d-flex">
-                        <img src="../assets/img/buy-comics-digital-comics.png" alt="">
-                        <h3 class="ms-2 mb-0 align-self-center">digital comics</h3>
-                    </li>
-                    <li class="d-flex">
-                        <img src="../assets/img/buy-comics-merchandise.png" alt="">
-                        <h3 class="ms-2 mb-0 align-self-center">dc merchandise</h3>
-                    </li>
-                    <li class="d-flex">
-                        <img src="../assets/img/buy-comics-subscriptions.png" alt="">
-                        <h3 class="ms-2 mb-0 align-self-center">subscription</h3>
-                    </li>
-                    <li class="d-flex">
-                        <img src="../assets/img/buy-comics-shop-locator.png" alt="">
-                        <h3 class="ms-2 mb-0 align-self-center">comic shop locator</h3>
-                    </li>
-                    <li class="d-flex">
-                        <img src="../assets/img/buy-dc-power-visa.svg" alt="">
-                        <h3 class="ms-2 mb-0 align-self-center">dc power visa</h3>
+                <ul class="d-flex justify-content-around py-4 px-0 m-0">
+                    <li v-for="section in sectionIcon" class="d-flex">
+                        <img :src="section.images" alt="">
+                        <h3 class="ms-2 mb-0 align-self-center">{{ section.title }}</h3>
                     </li>
                 </ul>
             </div>
