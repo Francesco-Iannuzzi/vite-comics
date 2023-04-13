@@ -69,10 +69,10 @@ export default {
         </section>
         <section class="bottom_footer">
             <div class="container d-flex justify-content-between align-content-center py-3">
-                <button class="btn">
+                <button class="sign btn">
                     <h2 class="text-uppercase m-0">sign-up now!</h2>
                 </button>
-                <div class="d-flex">
+                <div class="social d-flex">
                     <h2 class="text-uppercase align-self-center m-0">follow us</h2>
                     <ul class="d-flex align-self-center m-0 gap-2">
                         <li>1</li>

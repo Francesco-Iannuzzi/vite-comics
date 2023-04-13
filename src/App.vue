@@ -37,6 +37,7 @@ export default {
 
 <style lang="scss">
 @use '/node_modules/bootstrap/scss/bootstrap.scss';
+@use './assets/scss/partials/variables' as *;
 
 * {
   margin: 0;
@@ -53,14 +54,14 @@ header {
 
   .navbar-nav a {
     font-size: 0.8rem;
-    color: black;
+    color: $darker;
   }
 }
 
 main {
   .content {
-    background-color: black;
-    color: white;
+    background-color: $darker;
+    color: $light;
     display: flex;
 
     h1 {
@@ -70,7 +71,7 @@ main {
   }
 
   .merch {
-    background-color: blue;
+    background-color: $dc_color;
 
     img {
       width: 2rem;
@@ -78,7 +79,7 @@ main {
     }
 
     h3 {
-      color: white;
+      color: $light;
       font-size: 0.75rem;
     }
   }
@@ -90,7 +91,7 @@ footer {
     height: 20rem;
 
     .footer_left {
-      color: white;
+      color: $light;
 
       h2 {
         font-size: 1rem;
@@ -103,7 +104,7 @@ footer {
 
         a {
           text-decoration: none;
-          color: white;
+          color: $light;
         }
       }
     }
@@ -117,14 +118,28 @@ footer {
   }
 
   .bottom_footer {
-    background-color: gray;
+    background-color: $dark;
 
-    h2 {
-      font-size: 1rem;
+    .sign {
+      h2 {
+        font-size: 1rem;
+        color: $light;
+        padding: 0.5rem;
+        border: 2px solid $dc_color;
+      }
+
     }
 
-    ul {
-      list-style: none;
+    .social {
+      h2 {
+        font-size: 1rem;
+        color: $dc_color;
+      }
+
+      ul {
+        list-style: none;
+        color: $icon;
+      }
     }
   }
 }
