@@ -41,7 +41,7 @@ export default {
             <div class="container">
                 <ul class="d-flex justify-content-around py-4 px-0 m-0">
                     <li v-for="section in sectionIcon" class="d-flex">
-                        <img :src="section.images" alt="">
+                        <img :src="section.images" :alt="section.title">
                         <h3 class="ms-2 mb-0 align-self-center">{{ section.title }}</h3>
                     </li>
                 </ul>

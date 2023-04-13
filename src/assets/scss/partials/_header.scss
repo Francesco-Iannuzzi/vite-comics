@@ -1,0 +1,18 @@
+@use '../partials/variables' as *;
+
+header {
+    padding: 1rem 0;
+
+    .logo img {
+        width: 3rem;
+    }
+
+    .navbar-nav a {
+        font-size: 0.8rem;
+        color: $darker;
+
+        &:hover {
+            color: $dc_color;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@use '../partials/variables' as *;
+
+main {
+    .content {
+        background-color: $darker;
+        color: $light;
+        display: flex;
+
+        h1 {
+            padding: 3rem 0;
+            font-size: 2rem;
+        }
+    }
+
+    .merch {
+        background-color: $dc_color;
+
+        img {
+            width: 2rem;
+            object-fit: contain;
+        }
+
+        h3 {
+            color: $light;
+            font-size: 0.75rem;
+        }
+    }
+}

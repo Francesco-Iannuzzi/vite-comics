@@ -1,0 +1,62 @@
+@use '../partials/variables' as *;
+
+footer {
+    .up_footer {
+        background-image: url(/src/assets/img/footer-bg.jpg);
+        height: 20rem;
+
+        .footer_left {
+            color: $light;
+
+            h2 {
+                font-size: 1rem;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+                font-size: 0.7rem;
+
+                a {
+                    text-decoration: none;
+                    color: $icon;
+                }
+            }
+        }
+
+        .footer_right {
+
+            img {
+                height: 20rem;
+                align-self: center;
+            }
+        }
+    }
+
+    .bottom_footer {
+        background-color: $dark;
+        z-index: 1;
+
+        .sign {
+            h2 {
+                font-size: 1rem;
+                color: $light;
+                padding: 0.5rem;
+                border: 2px solid $dc_color;
+            }
+
+        }
+
+        .social {
+            h2 {
+                font-size: 1rem;
+                color: $dc_color;
+            }
+
+            ul {
+                list-style: none;
+                color: $icon;
+            }
+        }
+    }
+}
