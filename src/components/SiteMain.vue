@@ -1,8 +1,14 @@
 <script>
+import products from "../data/product.js";
+import ProductItem from "../components/ProductItem.vue";
 export default {
     name: 'SiteMain',
+    components: {
+        ProductItem
+    },
     data() {
         return {
+            products: products,
             sectionBanner: [
                 {
                     images: 'buy-comics-digital-comics.png',
@@ -37,11 +43,19 @@ export default {
 
 <template>
     <main>
-        <section class="content">
+        <section class="jumbotron"></section>
+        <!-- /jumbotron -->
+        <section class="comics">
             <div class="container">
-                <h1>Content goes here</h1>
+                <div class="badge_current_comics">
+                    <h1 class="text-uppercase">current series</h1>
+                </div>
+                <div class="row row-cols-6 py-5">
+                    <ProductItem v-for="product in products" :thumb="product.thumb" :series="product.series"></ProductItem>
+                </div>
             </div>
         </section>
+        <!-- /comics -->
         <section class="banner text-uppercase">
             <div class="container">
                 <ul class="d-flex justify-content-around py-4 px-0 m-0">
@@ -52,6 +66,7 @@ export default {
                 </ul>
             </div>
         </section>
+        <!-- /banner -->
     </main>
 </template>
 

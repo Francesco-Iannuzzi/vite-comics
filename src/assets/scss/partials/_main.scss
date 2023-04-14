@@ -1,14 +1,44 @@
 @use '../partials/variables' as *;
 
 main {
-    .content {
+    .jumbotron {
+        background-image: url(/src/assets/img/jumbotron.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 20rem;
+    }
+
+    .comics {
         background-color: $darker;
         color: $light;
         display: flex;
 
-        h1 {
-            padding: 3rem 0;
-            font-size: 2rem;
+        .badge_current_comics {
+            position: relative;
+
+            h1 {
+                color: $light;
+                background-color: $dc_color;
+                font-size: 1.2rem;
+                position: absolute;
+                padding: 0.5rem 1rem;
+                top: -1rem;
+                left: 0;
+            }
+        }
+
+        .card {
+            background-color: $darker;
+
+            .card-img-top {
+                img {
+                    height: 15rem;
+                }
+            }
+
+            h4 {
+                font-size: 0.8rem;
+            }
         }
     }
 
