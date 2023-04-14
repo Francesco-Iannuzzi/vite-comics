@@ -2,8 +2,9 @@
 
 footer {
     .up_footer {
-        background-image: url(/src/assets/img/footer-bg.jpg);
-        height: 20rem;
+        background-image: url(/src/assets/img/dc-logo-bg.png), url(/src/assets/img/footer-bg.jpg);
+        background-position: right center, left top;
+        background-repeat: no-repeat, repeat;
 
         .footer_left {
             color: $light;
@@ -21,14 +22,6 @@ footer {
                     text-decoration: none;
                     color: $icon;
                 }
-            }
-        }
-
-        .footer_right {
-
-            img {
-                height: 20rem;
-                align-self: center;
             }
         }
     }

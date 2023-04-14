@@ -1,6 +1,7 @@
 @use '../partials/variables' as *;
 
 header {
+    background-color: $light;
 
     .logo img {
         width: 3rem;

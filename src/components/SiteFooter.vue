@@ -47,9 +47,7 @@ export default {
                             </ul>
                         </div>
                     </div>
-                    <div class="footer_right col-7 d-flex justify-content-center">
-                        <img src="../assets/img/dc-logo-bg.png" alt="">
-                    </div>
+                    <div class="footer_right col-7 d-flex justify-content-center"></div>
                 </div>
             </div>
         </section>
