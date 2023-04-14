@@ -7,7 +7,12 @@ export default {
             shopList: ['Shop DC', 'Shop DC Collectibles'],
             dcList: ['Terms Of Use', 'Privacy policy (New)', 'Ad Choices', 'Advertising', 'Jobs', 'Subscriptions', 'Talent Workshops', 'CPSC Certificates', 'Ratings', 'Shop Help', 'Contact Us',],
             sitesList: ['DC', 'MAD Magazine', 'DC Kids', 'DC Universe', 'DC Power Visa',],
-            socialList: ['../assets/img/footer-facebook.png', '../assets/img/footer-twitter.png', '../assets/img/footer-youtube.png', '../assets/img/footer-pinterest.png', '../assets/img/footer-periscope.png',]
+            socialList: ['footer-facebook.png', 'footer-twitter.png', 'footer-youtube.png', 'footer-pinterest.png', 'footer-periscope.png',]
+        }
+    },
+    methods: {
+        getImageUrl(name) {
+            return new URL(`../assets/img/${name}`, import.meta.url).href
         }
     }
 }
@@ -58,8 +63,8 @@ export default {
                 </button>
                 <div class="social d-flex">
                     <h2 class="text-uppercase align-self-center m-0">follow us</h2>
-                    <ul class="d-flex align-self-center m-0 gap-2">
-                        <li v-for="icon in socialList"><img :src="icon" alt=""></li>
+                    <ul class="d-flex align-self-center m-0 gap-3">
+                        <li v-for="icon in socialList"><img :src="getImageUrl(icon)" alt=""></li>
                     </ul>
                 </div>
             </div>

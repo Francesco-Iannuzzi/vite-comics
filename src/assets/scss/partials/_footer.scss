@@ -48,7 +48,12 @@ footer {
 
             ul {
                 list-style: none;
-                color: $icon;
+                padding-left: 1rem;
+
+                li img {
+                    color: $icon;
+                    width: 1.5rem;
+                }
             }
         }
     }
