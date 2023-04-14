@@ -48,11 +48,16 @@ export default {
         <section class="comics">
             <div class="container">
                 <div class="badge_current_comics">
-                    <h1 class="text-uppercase">current series</h1>
+                    <button class="btn text-uppercase rounded-0 border-0">current series</button>
                 </div>
-                <div class="row row-cols-6 py-5">
+                <div class="row row-cols-1 row-cols-sm-2 row row-cols-md-3 row-cols-lg-6 row-cols-xl-6 py-5 text-center">
                     <ProductItem v-for="product in products" :thumb="product.thumb" :series="product.series"></ProductItem>
                 </div>
+                <!-- /row cards -->
+                <div class="badge_load_more d-flex justify-content-center pb-3">
+                    <button class="btn text-uppercase rounded-0 border-0">load more</button>
+                </div>
+                <!-- /badge_load_more -->
             </div>
         </section>
         <!-- /comics -->
